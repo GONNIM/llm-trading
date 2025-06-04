@@ -65,7 +65,7 @@ with st.sidebar:
     # 1. 데이터 기간 선택 방식 선택
     period_type = st.radio(
         "데이터 기간 선택 방식",
-        ["슬라이더로 선택", "직접 입력(일수)"],
+        ["슬라이더로 선택", "직접 입력 (일수)"],
         horizontal=True,
     )
     with st.form("input_form"):
