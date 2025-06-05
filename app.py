@@ -17,6 +17,7 @@ interval_options = {
     "1분봉": "minute1",
     "5분봉": "minute5",
     "10분봉": "minute10",
+    "15분봉": "minute15",
     "30분봉": "minute30",
     "60분봉": "minute60",
     "일봉": "day",
@@ -74,7 +75,7 @@ with st.sidebar:
         selected_interval_name = st.selectbox(
             "차트 단위",
             list(interval_options.keys()),
-            index=4,  # 기본값: 60분봉
+            index=4,  # 기본값: 30분봉
             help="차트 데이터의 시간 단위를 선택하세요.",
         )
         selected_interval = interval_options[selected_interval_name]
