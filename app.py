@@ -15,6 +15,7 @@ st.title("📊 업비트 자동매매 백테스트 - MACD, EMA")
 # 차트 단위 옵션 (한글:코드 매핑)
 interval_options = {
     "1분봉": "minute1",
+    "3분봉": "minute3",
     "5분봉": "minute5",
     "10분봉": "minute10",
     "15분봉": "minute15",
@@ -71,11 +72,11 @@ with st.sidebar:
     )
     with st.form("input_form"):
         # 거래 종목 직접 입력 및 검증
-        ticker = st.text_input("거래 종목 (예: BTC, ETH, KRW-BTC)", value="BTC")
+        ticker = st.text_input("거래 종목 (예: BTC, ETH, KRW-BTC)", value="DOGE")
         selected_interval_name = st.selectbox(
             "차트 단위",
             list(interval_options.keys()),
-            index=4,  # 기본값: 30분봉
+            index=5,  # 기본값: 30분봉
             help="차트 데이터의 시간 단위를 선택하세요.",
         )
         selected_interval = interval_options[selected_interval_name]
