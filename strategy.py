@@ -9,8 +9,8 @@ class MACDStrategy(Strategy):
     fast_period = 12
     slow_period = 26
     signal_period = 9
-    take_profit = 0.05
-    stop_loss = 0.03
+    take_profit = 0.03
+    stop_loss = 0.01
     macd_threshold = 0.0
 
     def init(self):
